@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired, Email, EqualTo
 from wtforms import ValidationError
 from flask_wtf.file import FileField, FileAllowed
 
-from flask_login import current_users
+from flask_login import current_user
 from puppyblog.models import User
 
 class LoginForm(FlaskForm):
@@ -15,7 +15,7 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     username = StringField('UserName', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired(), EqualTo=('pass_confirm', message='Passwords must match')])
+    password = PasswordField('Password', validators=[DataRequired(), EqualTo('pass_confirm', message='Passwords must match')])
     pass_confirm = PasswordField('Confirm Password', validators=[DataRequired()])
     submit = SubmitField('Register')
 
