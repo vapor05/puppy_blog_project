@@ -4,6 +4,10 @@
 # migrations files from flask_migrate
 /migrations
 
+# png and jpg files in the static folder
+*.png
+*.jpg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

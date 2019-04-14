@@ -57,7 +57,7 @@ def account():
 
         if form.picture.data:
             username = current_user.username
-            pic = add_profile_pic(form.picture.data)
+            pic = add_profile_pic(form.picture.data, username)
             current_user.profile_image = pic
 
         current_user.username = form.username.data
