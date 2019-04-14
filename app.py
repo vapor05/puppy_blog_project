@@ -1,4 +1,4 @@
 from puppyblog import app
 
 if __name__=='__main__':
-    app.run(debug=None)
+    app.run(debug=True)

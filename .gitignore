@@ -1,6 +1,9 @@
 # sqlite database files
 *.sqlite
 
+# migrations files from flask_migrate
+/migrations
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
